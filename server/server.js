@@ -31,7 +31,7 @@ app.get('/:searchResult', (req, res) => {
     if (results.length > 1){
         res.send(results);
     } else {
-        res.status(404).send({error: 'It looks like there arenot many great matches for your search'})
+        res.status(404).send({error: 'It looks like there are not many great matches for your search'})
     }
 });
 
@@ -45,4 +45,5 @@ router.get('/',(req,res) =>{
 })
 
 app.listen(port, () => console.log(`Starting on http://localhost:${port}`))
+
 module.exports = app;
